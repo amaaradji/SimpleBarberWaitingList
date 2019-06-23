@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Exported from Notepad++</title>
+<style type="text/css">
+span {
+	font-family: 'Courier New';
+	font-size: 10pt;
+	color: #000000;
+}
+.sc0 {
+}
+.sc4 {
+	color: #FF8000;
+}
+.sc5 {
+	font-weight: bold;
+	color: #0000FF;
+}
+.sc6 {
+	color: #808080;
+}
+.sc10 {
+	font-weight: bold;
+	color: #000080;
+}
+.sc11 {
+}
+.sc16 {
+	color: #8000FF;
+}
+</style>
+</head>
+<body>
+<div style="float: left; white-space: pre; line-height: 1; background: #FFFFFF; "><span class="sc16">package</span><span class="sc0"> </span><span class="sc11">com</span><span class="sc10">.</span><span class="sc11">company</span><span class="sc10">.</span><span class="sc11">simplebarberwaitinglist</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">android</span><span class="sc10">.</span><span class="sc11">content</span><span class="sc10">.</span><span class="sc11">Intent</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">android</span><span class="sc10">.</span><span class="sc11">support</span><span class="sc10">.</span><span class="sc11">annotation</span><span class="sc10">.</span><span class="sc11">Nullable</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">android</span><span class="sc10">.</span><span class="sc11">support</span><span class="sc10">.</span><span class="sc11">v7</span><span class="sc10">.</span><span class="sc11">app</span><span class="sc10">.</span><span class="sc11">AppCompatActivity</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">android</span><span class="sc10">.</span><span class="sc11">os</span><span class="sc10">.</span><span class="sc11">Bundle</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">android</span><span class="sc10">.</span><span class="sc11">view</span><span class="sc10">.</span><span class="sc11">View</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">android</span><span class="sc10">.</span><span class="sc11">widget</span><span class="sc10">.</span><span class="sc11">AdapterView</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">android</span><span class="sc10">.</span><span class="sc11">widget</span><span class="sc10">.</span><span class="sc11">ArrayAdapter</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">android</span><span class="sc10">.</span><span class="sc11">widget</span><span class="sc10">.</span><span class="sc11">Button</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">android</span><span class="sc10">.</span><span class="sc11">widget</span><span class="sc10">.</span><span class="sc11">ListView</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc5">import</span><span class="sc0"> </span><span class="sc11">java</span><span class="sc10">.</span><span class="sc11">util</span><span class="sc10">.</span><span class="sc11">ArrayList</span><span class="sc10">;</span><span class="sc0">
+
+</span><span class="sc16">public</span><span class="sc0"> </span><span class="sc16">class</span><span class="sc0"> </span><span class="sc11">WaitingListActivity</span><span class="sc0"> </span><span class="sc5">extends</span><span class="sc0"> </span><span class="sc11">AppCompatActivity</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">ListView</span><span class="sc0"> </span><span class="sc11">lv_list</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc11">ArrayList</span><span class="sc10">&lt;</span><span class="sc11">String</span><span class="sc10">&gt;</span><span class="sc0"> </span><span class="sc11">maliste</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc11">Button</span><span class="sc0"> </span><span class="sc11">bt_clear</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc11">ArrayAdapter</span><span class="sc0"> </span><span class="sc11">adapterWaintingList</span><span class="sc10">;</span><span class="sc0">
+
+    </span><span class="sc11">@Override</span><span class="sc0">
+    </span><span class="sc16">protected</span><span class="sc0"> </span><span class="sc16">void</span><span class="sc0"> </span><span class="sc11">onCreate</span><span class="sc10">(</span><span class="sc11">Bundle</span><span class="sc0"> </span><span class="sc11">savedInstanceState</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc5">super</span><span class="sc10">.</span><span class="sc11">onCreate</span><span class="sc10">(</span><span class="sc11">savedInstanceState</span><span class="sc10">);</span><span class="sc0">
+        </span><span class="sc11">setContentView</span><span class="sc10">(</span><span class="sc11">R</span><span class="sc10">.</span><span class="sc11">layout</span><span class="sc10">.</span><span class="sc11">activity_main</span><span class="sc10">);</span><span class="sc0">
+
+        </span><span class="sc11">lv_list</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">findViewById</span><span class="sc10">(</span><span class="sc11">R</span><span class="sc10">.</span><span class="sc11">id</span><span class="sc10">.</span><span class="sc11">lv_liste</span><span class="sc10">);</span><span class="sc0">
+        </span><span class="sc11">bt_clear</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">findViewById</span><span class="sc10">(</span><span class="sc11">R</span><span class="sc10">.</span><span class="sc11">id</span><span class="sc10">.</span><span class="sc11">bt_clear</span><span class="sc10">);</span><span class="sc0">
+
+        </span><span class="sc11">maliste</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">new</span><span class="sc0"> </span><span class="sc11">ArrayList</span><span class="sc10">&lt;&gt;();</span><span class="sc0">
+
+        </span><span class="sc11">adapterWaintingList</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">new</span><span class="sc0"> </span><span class="sc11">ArrayAdapter</span><span class="sc10">&lt;</span><span class="sc11">String</span><span class="sc10">&gt;(</span><span class="sc5">this</span><span class="sc10">,</span><span class="sc0">
+                </span><span class="sc11">android</span><span class="sc10">.</span><span class="sc11">R</span><span class="sc10">.</span><span class="sc11">layout</span><span class="sc10">.</span><span class="sc11">simple_list_item_1</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">maliste</span><span class="sc10">);</span><span class="sc0">
+
+        </span><span class="sc11">lv_list</span><span class="sc10">.</span><span class="sc11">setAdapter</span><span class="sc10">(</span><span class="sc11">adapterWaintingList</span><span class="sc10">);</span><span class="sc0">
+
+        </span><span class="sc11">bt_clear</span><span class="sc10">.</span><span class="sc11">setOnClickListener</span><span class="sc10">(</span><span class="sc5">new</span><span class="sc0"> </span><span class="sc11">View</span><span class="sc10">.</span><span class="sc11">OnClickListener</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+            </span><span class="sc11">@Override</span><span class="sc0">
+            </span><span class="sc16">public</span><span class="sc0"> </span><span class="sc16">void</span><span class="sc0"> </span><span class="sc11">onClick</span><span class="sc10">(</span><span class="sc11">View</span><span class="sc0"> </span><span class="sc11">v</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+                </span><span class="sc11">adapterWaintingList</span><span class="sc10">.</span><span class="sc11">clear</span><span class="sc10">();</span><span class="sc0">
+            </span><span class="sc10">}</span><span class="sc0">
+        </span><span class="sc10">});</span><span class="sc0">
+
+        </span><span class="sc11">lv_list</span><span class="sc10">.</span><span class="sc11">setOnItemClickListener</span><span class="sc10">(</span><span class="sc5">new</span><span class="sc0"> </span><span class="sc11">AdapterView</span><span class="sc10">.</span><span class="sc11">OnItemClickListener</span><span class="sc10">()</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+            </span><span class="sc11">@Override</span><span class="sc0">
+            </span><span class="sc16">public</span><span class="sc0"> </span><span class="sc16">void</span><span class="sc0"> </span><span class="sc11">onItemClick</span><span class="sc10">(</span><span class="sc11">AdapterView</span><span class="sc10">&lt;?&gt;</span><span class="sc0"> </span><span class="sc11">parent</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">View</span><span class="sc0"> </span><span class="sc11">view</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">position</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc16">long</span><span class="sc0"> </span><span class="sc11">id</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+                </span><span class="sc11">adapterWaintingList</span><span class="sc10">.</span><span class="sc11">remove</span><span class="sc10">(</span><span class="sc11">adapterWaintingList</span><span class="sc10">.</span><span class="sc11">getItem</span><span class="sc10">(</span><span class="sc11">position</span><span class="sc10">));</span><span class="sc0">
+            </span><span class="sc10">}</span><span class="sc0">
+        </span><span class="sc10">});</span><span class="sc0">
+
+    </span><span class="sc10">}</span><span class="sc0">
+
+    </span><span class="sc16">public</span><span class="sc0"> </span><span class="sc16">void</span><span class="sc0"> </span><span class="sc11">ajouter</span><span class="sc10">(</span><span class="sc11">View</span><span class="sc0"> </span><span class="sc11">view</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">Intent</span><span class="sc0"> </span><span class="sc11">i_DetailClient</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">new</span><span class="sc0"> </span><span class="sc11">Intent</span><span class="sc10">(</span><span class="sc11">getApplicationContext</span><span class="sc10">(),</span><span class="sc0"> </span><span class="sc11">DetailClientActivity</span><span class="sc10">.</span><span class="sc16">class</span><span class="sc10">);</span><span class="sc0">
+        </span><span class="sc11">startActivityForResult</span><span class="sc10">(</span><span class="sc11">i_DetailClient</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">101</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+
+    </span><span class="sc11">@Override</span><span class="sc0">
+    </span><span class="sc16">protected</span><span class="sc0"> </span><span class="sc16">void</span><span class="sc0"> </span><span class="sc11">onActivityResult</span><span class="sc10">(</span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">requestCode</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">resultCode</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">@Nullable</span><span class="sc0"> </span><span class="sc11">Intent</span><span class="sc0"> </span><span class="sc11">data</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc5">super</span><span class="sc10">.</span><span class="sc11">onActivityResult</span><span class="sc10">(</span><span class="sc11">requestCode</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">resultCode</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">data</span><span class="sc10">);</span><span class="sc0">
+        </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">requestCode</span><span class="sc0"> </span><span class="sc10">==</span><span class="sc0"> </span><span class="sc4">101</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+            </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">resultCode</span><span class="sc0"> </span><span class="sc10">==</span><span class="sc0"> </span><span class="sc11">RESULT_OK</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+                </span><span class="sc11">String</span><span class="sc0"> </span><span class="sc11">msg_back</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">data</span><span class="sc10">.</span><span class="sc11">getExtras</span><span class="sc10">().</span><span class="sc11">getString</span><span class="sc10">(</span><span class="sc6">"client_details"</span><span class="sc10">);</span><span class="sc0">
+                </span><span class="sc11">adapterWaintingList</span><span class="sc10">.</span><span class="sc11">add</span><span class="sc10">(</span><span class="sc11">msg_back</span><span class="sc10">);</span><span class="sc0">
+            </span><span class="sc10">}</span><span class="sc0"> </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">resultCode</span><span class="sc0"> </span><span class="sc10">==</span><span class="sc0"> </span><span class="sc11">RESULT_CANCELED</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+            </span><span class="sc10">}</span><span class="sc0">
+        </span><span class="sc10">}</span><span class="sc0">
+
+    </span><span class="sc10">}</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+</span></div></body>
+</html>

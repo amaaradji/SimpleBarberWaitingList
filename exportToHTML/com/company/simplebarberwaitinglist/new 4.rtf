@@ -1,0 +1,102 @@
+{\rtf1\ansi\deff0\deftab480
+
+{\fonttbl
+{\f000 Courier New;}
+{\f001 Courier New;}
+{\f002 Courier New;}
+{\f003 Courier New;}
+{\f004 Courier New;}
+{\f005 Courier New;}
+{\f006 Courier New;}
+{\f007 Courier New;}
+}
+
+{\colortbl
+\red000\green000\blue000;
+\red255\green255\blue255;
+\red255\green128\blue000;
+\red255\green255\blue255;
+\red000\green000\blue255;
+\red255\green255\blue255;
+\red128\green128\blue128;
+\red255\green255\blue255;
+\red000\green000\blue128;
+\red255\green255\blue255;
+\red000\green000\blue000;
+\red255\green255\blue255;
+\red128\green000\blue255;
+\red255\green255\blue255;
+\red000\green000\blue000;
+\red255\green255\blue255;
+}
+
+\f1028672852\fs20\cb15\cf14 \highlight13\cf12 package\highlight1\cf0  \highlight11\cf10 com\highlight9\cf8\b .\highlight11\cf10\b0 company\highlight9\cf8\b .\highlight11\cf10\b0 simplebarberwaitinglist\highlight9\cf8\b ;\highlight1\cf0\b0 \par
+\par
+\highlight5\cf4\b import\highlight1\cf0\b0  \highlight11\cf10 android\highlight9\cf8\b .\highlight11\cf10\b0 content\highlight9\cf8\b .\highlight11\cf10\b0 Intent\highlight9\cf8\b ;\highlight1\cf0\b0 \par
+\highlight5\cf4\b import\highlight1\cf0\b0  \highlight11\cf10 android\highlight9\cf8\b .\highlight11\cf10\b0 support\highlight9\cf8\b .\highlight11\cf10\b0 annotation\highlight9\cf8\b .\highlight11\cf10\b0 Nullable\highlight9\cf8\b ;\highlight1\cf0\b0 \par
+\highlight5\cf4\b import\highlight1\cf0\b0  \highlight11\cf10 android\highlight9\cf8\b .\highlight11\cf10\b0 support\highlight9\cf8\b .\highlight11\cf10\b0 v7\highlight9\cf8\b .\highlight11\cf10\b0 app\highlight9\cf8\b .\highlight11\cf10\b0 AppCompatActivity\highlight9\cf8\b ;\highlight1\cf0\b0 \par
+\highlight5\cf4\b import\highlight1\cf0\b0  \highlight11\cf10 android\highlight9\cf8\b .\highlight11\cf10\b0 os\highlight9\cf8\b .\highlight11\cf10\b0 Bundle\highlight9\cf8\b ;\highlight1\cf0\b0 \par
+\highlight5\cf4\b import\highlight1\cf0\b0  \highlight11\cf10 android\highlight9\cf8\b .\highlight11\cf10\b0 view\highlight9\cf8\b .\highlight11\cf10\b0 View\highlight9\cf8\b ;\highlight1\cf0\b0 \par
+\highlight5\cf4\b import\highlight1\cf0\b0  \highlight11\cf10 android\highlight9\cf8\b .\highlight11\cf10\b0 widget\highlight9\cf8\b .\highlight11\cf10\b0 AdapterView\highlight9\cf8\b ;\highlight1\cf0\b0 \par
+\highlight5\cf4\b import\highlight1\cf0\b0  \highlight11\cf10 android\highlight9\cf8\b .\highlight11\cf10\b0 widget\highlight9\cf8\b .\highlight11\cf10\b0 ArrayAdapter\highlight9\cf8\b ;\highlight1\cf0\b0 \par
+\highlight5\cf4\b import\highlight1\cf0\b0  \highlight11\cf10 android\highlight9\cf8\b .\highlight11\cf10\b0 widget\highlight9\cf8\b .\highlight11\cf10\b0 Button\highlight9\cf8\b ;\highlight1\cf0\b0 \par
+\highlight5\cf4\b import\highlight1\cf0\b0  \highlight11\cf10 android\highlight9\cf8\b .\highlight11\cf10\b0 widget\highlight9\cf8\b .\highlight11\cf10\b0 ListView\highlight9\cf8\b ;\highlight1\cf0\b0 \par
+\par
+\highlight5\cf4\b import\highlight1\cf0\b0  \highlight11\cf10 java\highlight9\cf8\b .\highlight11\cf10\b0 util\highlight9\cf8\b .\highlight11\cf10\b0 ArrayList\highlight9\cf8\b ;\highlight1\cf0\b0 \par
+\par
+\highlight13\cf12 public\highlight1\cf0  \highlight13\cf12 class\highlight1\cf0  \highlight11\cf10 WaitingListActivity\highlight1\cf0  \highlight5\cf4\b extends\highlight1\cf0\b0  \highlight11\cf10 AppCompatActivity\highlight1\cf0  \highlight9\cf8\b \{\highlight1\cf0\b0 \par
+    \highlight11\cf10 ListView\highlight1\cf0  \highlight11\cf10 lv_list\highlight9\cf8\b ;\highlight1\cf0\b0 \par
+    \highlight11\cf10 ArrayList\highlight9\cf8\b <\highlight11\cf10\b0 String\highlight9\cf8\b >\highlight1\cf0\b0  \highlight11\cf10 maliste\highlight9\cf8\b ;\highlight1\cf0\b0 \par
+    \highlight11\cf10 Button\highlight1\cf0  \highlight11\cf10 bt_clear\highlight9\cf8\b ;\highlight1\cf0\b0 \par
+    \highlight11\cf10 ArrayAdapter\highlight1\cf0  \highlight11\cf10 adapterWaintingList\highlight9\cf8\b ;\highlight1\cf0\b0 \par
+\par
+    \highlight11\cf10 @Override\highlight1\cf0 \par
+    \highlight13\cf12 protected\highlight1\cf0  \highlight13\cf12 void\highlight1\cf0  \highlight11\cf10 onCreate\highlight9\cf8\b (\highlight11\cf10\b0 Bundle\highlight1\cf0  \highlight11\cf10 savedInstanceState\highlight9\cf8\b )\highlight1\cf0\b0  \highlight9\cf8\b \{\highlight1\cf0\b0 \par
+        \highlight5\cf4\b super\highlight9\cf8 .\highlight11\cf10\b0 onCreate\highlight9\cf8\b (\highlight11\cf10\b0 savedInstanceState\highlight9\cf8\b );\highlight1\cf0\b0 \par
+        \highlight11\cf10 setContentView\highlight9\cf8\b (\highlight11\cf10\b0 R\highlight9\cf8\b .\highlight11\cf10\b0 layout\highlight9\cf8\b .\highlight11\cf10\b0 activity_main\highlight9\cf8\b );\highlight1\cf0\b0 \par
+\par
+        \highlight11\cf10 lv_list\highlight1\cf0  \highlight9\cf8\b =\highlight1\cf0\b0  \highlight11\cf10 findViewById\highlight9\cf8\b (\highlight11\cf10\b0 R\highlight9\cf8\b .\highlight11\cf10\b0 id\highlight9\cf8\b .\highlight11\cf10\b0 lv_liste\highlight9\cf8\b );\highlight1\cf0\b0 \par
+        \highlight11\cf10 bt_clear\highlight1\cf0  \highlight9\cf8\b =\highlight1\cf0\b0  \highlight11\cf10 findViewById\highlight9\cf8\b (\highlight11\cf10\b0 R\highlight9\cf8\b .\highlight11\cf10\b0 id\highlight9\cf8\b .\highlight11\cf10\b0 bt_clear\highlight9\cf8\b );\highlight1\cf0\b0 \par
+\par
+        \highlight11\cf10 maliste\highlight1\cf0  \highlight9\cf8\b =\highlight1\cf0\b0  \highlight5\cf4\b new\highlight1\cf0\b0  \highlight11\cf10 ArrayList\highlight9\cf8\b <>();\highlight1\cf0\b0 \par
+\par
+        \highlight11\cf10 adapterWaintingList\highlight1\cf0  \highlight9\cf8\b =\highlight1\cf0\b0  \highlight5\cf4\b new\highlight1\cf0\b0  \highlight11\cf10 ArrayAdapter\highlight9\cf8\b <\highlight11\cf10\b0 String\highlight9\cf8\b >(\highlight5\cf4 this\highlight9\cf8 ,\highlight1\cf0\b0 \par
+                \highlight11\cf10 android\highlight9\cf8\b .\highlight11\cf10\b0 R\highlight9\cf8\b .\highlight11\cf10\b0 layout\highlight9\cf8\b .\highlight11\cf10\b0 simple_list_item_1\highlight9\cf8\b ,\highlight1\cf0\b0  \highlight11\cf10 maliste\highlight9\cf8\b );\highlight1\cf0\b0 \par
+\par
+        \highlight11\cf10 lv_list\highlight9\cf8\b .\highlight11\cf10\b0 setAdapter\highlight9\cf8\b (\highlight11\cf10\b0 adapterWaintingList\highlight9\cf8\b );\highlight1\cf0\b0 \par
+\par
+        \highlight11\cf10 bt_clear\highlight9\cf8\b .\highlight11\cf10\b0 setOnClickListener\highlight9\cf8\b (\highlight5\cf4 new\highlight1\cf0\b0  \highlight11\cf10 View\highlight9\cf8\b .\highlight11\cf10\b0 OnClickListener\highlight9\cf8\b ()\highlight1\cf0\b0  \highlight9\cf8\b \{\highlight1\cf0\b0 \par
+            \highlight11\cf10 @Override\highlight1\cf0 \par
+            \highlight13\cf12 public\highlight1\cf0  \highlight13\cf12 void\highlight1\cf0  \highlight11\cf10 onClick\highlight9\cf8\b (\highlight11\cf10\b0 View\highlight1\cf0  \highlight11\cf10 v\highlight9\cf8\b )\highlight1\cf0\b0  \highlight9\cf8\b \{\highlight1\cf0\b0 \par
+                \highlight11\cf10 adapterWaintingList\highlight9\cf8\b .\highlight11\cf10\b0 clear\highlight9\cf8\b ();\highlight1\cf0\b0 \par
+            \highlight9\cf8\b \}\highlight1\cf0\b0 \par
+        \highlight9\cf8\b \});\highlight1\cf0\b0 \par
+\par
+        \highlight11\cf10 lv_list\highlight9\cf8\b .\highlight11\cf10\b0 setOnItemClickListener\highlight9\cf8\b (\highlight5\cf4 new\highlight1\cf0\b0  \highlight11\cf10 AdapterView\highlight9\cf8\b .\highlight11\cf10\b0 OnItemClickListener\highlight9\cf8\b ()\highlight1\cf0\b0  \highlight9\cf8\b \{\highlight1\cf0\b0 \par
+            \highlight11\cf10 @Override\highlight1\cf0 \par
+            \highlight13\cf12 public\highlight1\cf0  \highlight13\cf12 void\highlight1\cf0  \highlight11\cf10 onItemClick\highlight9\cf8\b (\highlight11\cf10\b0 AdapterView\highlight9\cf8\b <?>\highlight1\cf0\b0  \highlight11\cf10 parent\highlight9\cf8\b ,\highlight1\cf0\b0  \highlight11\cf10 View\highlight1\cf0  \highlight11\cf10 view\highlight9\cf8\b ,\highlight1\cf0\b0  \highlight13\cf12 int\highlight1\cf0  \highlight11\cf10 position\highlight9\cf8\b ,\highlight1\cf0\b0  \highlight13\cf12 long\highlight1\cf0  \highlight11\cf10 id\highlight9\cf8\b )\highlight1\cf0\b0  \highlight9\cf8\b \{\highlight1\cf0\b0 \par
+                \highlight11\cf10 adapterWaintingList\highlight9\cf8\b .\highlight11\cf10\b0 remove\highlight9\cf8\b (\highlight11\cf10\b0 adapterWaintingList\highlight9\cf8\b .\highlight11\cf10\b0 getItem\highlight9\cf8\b (\highlight11\cf10\b0 position\highlight9\cf8\b ));\highlight1\cf0\b0 \par
+            \highlight9\cf8\b \}\highlight1\cf0\b0 \par
+        \highlight9\cf8\b \});\highlight1\cf0\b0 \par
+\par
+    \highlight9\cf8\b \}\highlight1\cf0\b0 \par
+\par
+    \highlight13\cf12 public\highlight1\cf0  \highlight13\cf12 void\highlight1\cf0  \highlight11\cf10 ajouter\highlight9\cf8\b (\highlight11\cf10\b0 View\highlight1\cf0  \highlight11\cf10 view\highlight9\cf8\b )\highlight1\cf0\b0  \highlight9\cf8\b \{\highlight1\cf0\b0 \par
+        \highlight11\cf10 Intent\highlight1\cf0  \highlight11\cf10 i_DetailClient\highlight1\cf0  \highlight9\cf8\b =\highlight1\cf0\b0  \highlight5\cf4\b new\highlight1\cf0\b0  \highlight11\cf10 Intent\highlight9\cf8\b (\highlight11\cf10\b0 getApplicationContext\highlight9\cf8\b (),\highlight1\cf0\b0  \highlight11\cf10 DetailClientActivity\highlight9\cf8\b .\highlight13\cf12\b0 class\highlight9\cf8\b );\highlight1\cf0\b0 \par
+        \highlight11\cf10 startActivityForResult\highlight9\cf8\b (\highlight11\cf10\b0 i_DetailClient\highlight9\cf8\b ,\highlight1\cf0\b0  \highlight3\cf2 101\highlight9\cf8\b );\highlight1\cf0\b0 \par
+    \highlight9\cf8\b \}\highlight1\cf0\b0 \par
+\par
+    \highlight11\cf10 @Override\highlight1\cf0 \par
+    \highlight13\cf12 protected\highlight1\cf0  \highlight13\cf12 void\highlight1\cf0  \highlight11\cf10 onActivityResult\highlight9\cf8\b (\highlight13\cf12\b0 int\highlight1\cf0  \highlight11\cf10 requestCode\highlight9\cf8\b ,\highlight1\cf0\b0  \highlight13\cf12 int\highlight1\cf0  \highlight11\cf10 resultCode\highlight9\cf8\b ,\highlight1\cf0\b0  \highlight11\cf10 @Nullable\highlight1\cf0  \highlight11\cf10 Intent\highlight1\cf0  \highlight11\cf10 data\highlight9\cf8\b )\highlight1\cf0\b0  \highlight9\cf8\b \{\highlight1\cf0\b0 \par
+        \highlight5\cf4\b super\highlight9\cf8 .\highlight11\cf10\b0 onActivityResult\highlight9\cf8\b (\highlight11\cf10\b0 requestCode\highlight9\cf8\b ,\highlight1\cf0\b0  \highlight11\cf10 resultCode\highlight9\cf8\b ,\highlight1\cf0\b0  \highlight11\cf10 data\highlight9\cf8\b );\highlight1\cf0\b0 \par
+        \highlight5\cf4\b if\highlight1\cf0\b0  \highlight9\cf8\b (\highlight11\cf10\b0 requestCode\highlight1\cf0  \highlight9\cf8\b ==\highlight1\cf0\b0  \highlight3\cf2 101\highlight9\cf8\b )\highlight1\cf0\b0  \highlight9\cf8\b \{\highlight1\cf0\b0 \par
+            \highlight5\cf4\b if\highlight1\cf0\b0  \highlight9\cf8\b (\highlight11\cf10\b0 resultCode\highlight1\cf0  \highlight9\cf8\b ==\highlight1\cf0\b0  \highlight11\cf10 RESULT_OK\highlight9\cf8\b )\highlight1\cf0\b0  \highlight9\cf8\b \{\highlight1\cf0\b0 \par
+                \highlight11\cf10 String\highlight1\cf0  \highlight11\cf10 msg_back\highlight1\cf0  \highlight9\cf8\b =\highlight1\cf0\b0  \highlight11\cf10 data\highlight9\cf8\b .\highlight11\cf10\b0 getExtras\highlight9\cf8\b ().\highlight11\cf10\b0 getString\highlight9\cf8\b (\highlight7\cf6\b0 "client_details"\highlight9\cf8\b );\highlight1\cf0\b0 \par
+                \highlight11\cf10 adapterWaintingList\highlight9\cf8\b .\highlight11\cf10\b0 add\highlight9\cf8\b (\highlight11\cf10\b0 msg_back\highlight9\cf8\b );\highlight1\cf0\b0 \par
+            \highlight9\cf8\b \}\highlight1\cf0\b0  \highlight5\cf4\b else\highlight1\cf0\b0  \highlight5\cf4\b if\highlight1\cf0\b0  \highlight9\cf8\b (\highlight11\cf10\b0 resultCode\highlight1\cf0  \highlight9\cf8\b ==\highlight1\cf0\b0  \highlight11\cf10 RESULT_CANCELED\highlight9\cf8\b )\highlight1\cf0\b0  \highlight9\cf8\b \{\highlight1\cf0\b0 \par
+            \highlight9\cf8\b \}\highlight1\cf0\b0 \par
+        \highlight9\cf8\b \}\highlight1\cf0\b0 \par
+\par
+    \highlight9\cf8\b \}\highlight1\cf0\b0 \par
+\highlight9\cf8\b \}\highlight1\cf0\b0 \par
+}
